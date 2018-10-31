@@ -6,11 +6,12 @@ module testlshift();
   wire[31:0] res;
   reg passed = 1;
 
-  lshift28 dut(.immediate(immediate[25:0]), .lshifted(res[27:0]));
+  lshift32 dut32(.immediate(immediate), .lshifted(res));
+
 
   task shift_check;
     if(immediate<<2!=res) begin
-      $display("immediate(%d) and extened values(%d) disagreed.", immediate, res);
+      $display("immediate(%d) and shifted values(%d) disagreed.", immediate, res);
       passed = 0;
     end
   endtask
@@ -18,7 +19,7 @@ module testlshift();
   initial begin
     immediate = 32'b0; #100
     $dumpfile("lshift.vcd");
-    $dumpvars(0, dut);
+    $dumpvars(0, dut32);
 
     // Test 0
     shift_check();
@@ -39,7 +40,7 @@ module testlshift();
     immediate = 32'd3934; #10
     shift_check();
 
-    $display("DUT success?: %b", passed);
+    $display("DUT32 success?: %b", passed);
   end
 
 endmodule
