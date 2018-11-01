@@ -1,4 +1,4 @@
-`include "fsm.v"
+`include "instructionDecoder.v"
 
 module testfsm();
   reg[5:0] opcode;
@@ -10,7 +10,7 @@ module testfsm();
   wire[1:0] muxB_en, regWriteAddSelect, muxPC;
   wire[2:0] ALUop;
 
-  fsm dut(.opcode(opcode), .functcode(functcode), .regWrite(regWrite), .muxA_en(muxA_en), .dm_we(dm_we), .muxWD3_en(muxWD3_en),
+  instructionDecoder dut(.opcode(opcode), .functcode(functcode), .regWrite(regWrite), .muxA_en(muxA_en), .dm_we(dm_we), .muxWD3_en(muxWD3_en),
           .muxB_en(muxB_en), .regWriteAddSelect(regWriteAddSelect), .muxPC(muxPC), .ALUop(ALUop), .zero(zero));
 
   initial begin

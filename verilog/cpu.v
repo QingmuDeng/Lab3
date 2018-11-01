@@ -1,7 +1,7 @@
 `include "alu.v"
 `include "memory.v"
 `include "lshift2.v"
-`include "fsm.v"
+`include "instructionDecoder.v"
 `include "mux.v"
 `include "signextend.v"
 `include "regfile.v"
@@ -120,7 +120,7 @@ regfile registerFile(
   .ReadData2(readOut2)
   );
 
-fsm opDecoder(
+instructionDecoder opDecoder(
   .opcode(instruction[31:26]),
   .functcode(instruction[5:0]),
   .regWrite(regWr_en),

@@ -28,7 +28,7 @@
 `define ORSIGNAL   3'd7
 
 
-module fsm(
+module instructionDecoder(
     input [5:0] opcode,
     input [5:0] functcode,
     input zero,
