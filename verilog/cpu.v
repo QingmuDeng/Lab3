@@ -31,8 +31,8 @@ memory cpuMemory (
   .clk(clk),
   .dataMemorydataOut(dataOut),
   .instructionOut(instruction),
-  .InstructionAddress(pcOut[14:0]), // initially we set these to [15:0], address are not full 32 bits???
-  .dataMemoryAddress(aluResult[14:0]), //// address are not full 32 bits???
+  .InstructionAddress(pcOut), // initially we set these to [15:0], address are not full 32 bits???
+  .dataMemoryAddress(aluResult), //// address are not full 32 bits???
   .dataMemorywriteEnable(dm_we),
   .dataMemorydataIn(readOut2)
   );

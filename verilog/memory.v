@@ -9,8 +9,8 @@
 
 module memory
   #(
-    parameter addresswidth  = 15,
-    parameter depth         = 2**addresswidth,
+    parameter addresswidth  = 32,
+    parameter depth         = 2**15,
     parameter width         = 32
     )
    (
@@ -24,7 +24,13 @@ module memory
     );
 
 
+   wire [14:0] compactInstructionAddress;
+   wire [14:0] compactDataMemoryAddress;
+
    reg [width-1:0]           memory [depth-1:0];
+
+   assign compactInstructionAddress = InstructionAddress[14:0];
+   assign compactDataMemoryAddress = dataMemoryAddress[14:0];
 
    always @(posedge clk) begin
       if(dataMemorywriteEnable)
