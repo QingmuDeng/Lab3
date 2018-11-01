@@ -31,11 +31,14 @@
 module fsm(
     input [5:0] opcode,
     input [5:0] functcode,
+    input zero,
 
     output reg regWrite, muxA_en, dm_we, muxWD3_en, branch,
     output reg [1:0] muxB_en, regWriteAddSelect, muxPC,
     output reg [2:0] ALUop
   );
+  wire nzero;
+  not not0(nzero, zero);
 
   always @(*) begin
     case(opcode)
@@ -80,7 +83,7 @@ module fsm(
         dm_we <= 1'b0;
         muxWD3_en <= 1'b0;
         muxB_en <= 2'd0;
-        regWriteAddSelect <= 2'd2;
+        regWriteAddSelect <= 2'd0;
         muxPC <= 2'd0;
         branch <= 1'b0;
         ALUop <= `ADDSIGNAL;
@@ -105,9 +108,13 @@ module fsm(
         // muxWD3_en = x;
         muxB_en <= 2'd1;
         // regWriteAddSelect = x;
-        muxPC <= 2'd3;
         branch <= 1'b1;
         ALUop <= `SUBSIGNAL;
+        if(zero) begin
+          muxPC <= 2'd3;
+        end else begin
+          muxPC <= 2'd0;
+        end
       end
 
       `BNE: begin
@@ -117,9 +124,13 @@ module fsm(
         // muxWD3_en = x;
         muxB_en <= 2'd1;
         // regWriteAddSelect = x;
-        muxPC <= 2'd3;
         branch <= 1'b1;
         ALUop <= `SUBSIGNAL;
+        if(nzero) begin
+          muxPC <= 2'd3;
+        end else begin
+          muxPC <= 2'd0;
+        end
       end
 
       `ADDI: begin
