@@ -9,14 +9,14 @@
 
 module memory
   #(
-    parameter addresswidth  = 15,
+    parameter addresswidth  = 10,
     parameter depth         = 2**addresswidth,
     parameter width         = 32
     )
    (
     input                    clk,
-    output reg [width-1:0]   dataMemorydataOut,
-    output reg [width-1:0]   instructionOut,
+    output [width-1:0]   dataMemorydataOut,
+    output [width-1:0]   instructionOut,
     input [addresswidth-1:0] InstructionAddress,
     input [addresswidth-1:0] dataMemoryAddress,
     input                    dataMemorywriteEnable,
@@ -27,10 +27,13 @@ module memory
    reg [width-1:0]           memory [depth-1:0];
 
    always @(posedge clk) begin
-      instructionOut <= memory[InstructionAddress];
       if(dataMemorywriteEnable)
         memory[dataMemoryAddress] <= dataMemorydataIn;
-      dataMemorydataOut <= memory[dataMemoryAddress];
    end
+
+   initial $readmemh("test2.dat", memory);
+
+   assign dataMemorydataOut = memory[dataMemoryAddress];
+   assign instructionOut = memory[InstructionAddress];
 
 endmodule
