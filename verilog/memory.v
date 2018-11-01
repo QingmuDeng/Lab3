@@ -34,7 +34,7 @@ module memory
    initial $readmemh("test1.text", memory, 0);
    initial $readmemh("test1.data", memory, 16'h1000);
 
-   assign dataMemorydataOut = memory[dataMemoryAddress];
+   assign dataMemorydataOut = memory[dataMemoryAddress>>2];
    assign instructionOut = memory[InstructionAddress>>2];
 
 endmodule
