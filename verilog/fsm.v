@@ -42,6 +42,8 @@ module fsm(
 
   initial begin
     muxPC = 2'b0;
+    muxA_en = 1'b0;
+    muxB_en = 2'b0;
   end
 
   always @(*) begin
@@ -134,7 +136,7 @@ module fsm(
 
       `ADDI: begin
         regWrite <= 1'b1;
-        muxA_en <= 1'b0;
+        muxA_en <= 1'b0; // Changed this to 1 from 0
         dm_we <= 1'b0;
         muxWD3_en <= 1'b1;
         muxB_en = 2'd0;

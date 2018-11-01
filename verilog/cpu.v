@@ -56,7 +56,7 @@ mux4to1by32 muxPC(
 mux4to1by5 muxRegWriteSelect(
   .address(regWriteSelectControl),
   .input0(instruction[20:16]),
-  .input1(5'd31),
+  .input1(5'h1F),
   .input2(instruction[15:11]),
   .input3(),
   .out(regWrAddress)
