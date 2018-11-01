@@ -6,7 +6,7 @@
 //   1 synchronous, positive edge triggered write port
 //------------------------------------------------------------------------------
 `include "register.v"
-`include "mux.v"
+`include "mux_reg.v"
 `include "decoders.v"
 
 module regfile

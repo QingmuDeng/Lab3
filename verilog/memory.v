@@ -7,11 +7,11 @@
 //   If writeEnable is true, writes dataIn to mem[address]
 //------------------------------------------------------------------------
 
-module instructionmemory
+module memory
   #(
     parameter addresswidth  = 15,
     parameter depth         = 2**addresswidth,
-    parameter width         = 8
+    parameter width         = 32
     )
    (
     input                    clk,

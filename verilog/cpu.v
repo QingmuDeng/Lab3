@@ -12,13 +12,27 @@ module cpu(
     );
 
 wire [31:0] pcIn, pcOut, instruction, dataOut;
+wire [31:0] opA, opB;
+wire [4:0] regWrAddress;
+wire [31:0] writeData;
+wire [31:0] signExtended;
+wire [31:0] branchALUin;
+wire [27:0] jumpShifted;
+wire [31:0] aluResult;
+wire zeroFlag;
+wire [31:0] readOut1, readOut2;
+wire [1:0] pcMuxSelect, regWriteSelectControl, muxB_en;
+wire dm_we, regWr_en, muxAselect, muxWd3_en;
+wire [31:0] pcPlusFour;
+wire [31:0] branchAddress;
+wire [2:0] ALUop;
 
 memory cpuMemory (
   .clk(clk),
   .dataMemorydataOut(dataOut),
   .instructionOut(instruction),
-  .InstructionAddress(pcOut),
-  .dataMemoryAddress(aluResult),
+  .InstructionAddress(pcOut[14:0]), // address are not full 32 bits???
+  .dataMemoryAddress(aluResult[14:0]), //// address are not full 32 bits???
   .dataMemorywriteEnable(dm_we),
   .dataMemorydataIn(readOut2)
   );
@@ -30,51 +44,50 @@ programCounter pc (
   .q(pcOut)
   );
 
-mux4to1 muxPC(
+mux4to1by32 muxPC(
   .address(pcMuxSelect),
-  .inputs({pcPlusFour,{jumpShifted, pcPlusFour},readOut1,branchAddress}),
+  .input0(pcPlusFour),
+  .input1({pcPlusFour[31:28], jumpShifted}),
+  .input2(readOut1),
+  .input3(branchAddress),
   .out(pcIn)
   );
 
-wire [4:0] regWrAddress;
-
-mux4to1 muxRegWriteSelect(
+mux4to1by5 muxRegWriteSelect(
   .address(regWriteSelectControl),
-  .inputs({instruction[20:16], 5'd31, instruction[15:11]}),
+  .input0(instruction[20:16]),
+  .input1(5'd31),
+  .input2(instruction[15:11]),
+  .input3(),
   .out(regWrAddress)
   );
 
-mux4to1 muxB(
+mux4to1by32 muxB(
     .address(muxB_en),
-    .inputs({signExtended, readOut2, 32'd4}),
+    .input0(signExtended),
+    .input1(readOut2),
+    .input2(32'd4),
     .out(opB)
     );
 
-wire [31:0] opA, opB;
-
-mux2to1 muxA(
+mux2to1by32 muxA(
   .address(muxAselect),
-  .inputs({readOut1, pcOut}),
+  .input0(readOut1),
+  .input1(pcOut),
   .out(opA)
   );
 
-wire [31:0] writeData;
-
-mux2to1 muxWD3(
+mux2to1by32 muxWD3(
   .address(muxWd3_en),
-  .inputs({dataOut, aluResult}),
+  .input0(dataOut),
+  .input1(aluResult),
   .out(writeData)
   );
-
-wire [31:0] signExtended;
 
 signExtend signExtension(
   .immediate(instruction[15:0]),
   .extended(signExtended)
   );
-
-wire [31:0] branchALUin;
-wire [27:0] jumpShifted;
 
 lshift32 shiftSignExt(
   .immediate(signExtended),
@@ -86,9 +99,6 @@ lshift28 shiftPC(
   .lshifted(jumpShifted)
   );
 
-wire [31:0] aluResult;
-wire zeroFlag;
-
 ALU OpALU(
   .operandA(opA),
   .operandB(opB),
@@ -99,10 +109,8 @@ ALU OpALU(
   .result(aluResult)
   );
 
-wire [31:0] readOut1, readOut2;
-
 regfile registerFile(
-  .clk(clk),
+  .Clk(clk),
   .RegWrite(regWr_en),
   .WriteRegister(regWrAddress),
   .ReadRegister1(instruction[25:21]),
@@ -112,15 +120,12 @@ regfile registerFile(
   .ReadData2(readOut2)
   );
 
-  wire [1:0] pcMuxSelect, regWriteSelectControl, muxB_en;
-  wire dm_we, regWr_en, muxAselect, muxWd3_en;
-
 fsm opDecoder(
   .opcode(instruction[31:26]),
   .functcode(instruction[5:0]),
   .regWrite(regWr_en),
   .muxA_en(muxAselect),
-  .zero(zero_Flag),
+  .zero(zeroFlag),
   .dm_we(dm_we),
   .muxWD3_en(muxWd3_en),
   .muxB_en(muxB_en),
@@ -128,8 +133,6 @@ fsm opDecoder(
   .muxPC(pcMuxSelect),
   .ALUop(ALUop)
   );
-
-wire [31:0] pcPlusFour;
 
 ALU pcAddFour(
   .operandA(32'd4),
@@ -140,8 +143,6 @@ ALU pcAddFour(
   .carryout(),
   .result(pcPlusFour)
   );
-
-wire [31:0] branchAddress;
 
 ALU pcBranch(
   .operandA(branchALUin),
