@@ -1,6 +1,6 @@
 `include "instructionDecoder.v"
 
-module testfsm();
+module testinstructionDecoder();
   reg[5:0] opcode;
   reg[5:0] functcode;
   reg zero;
