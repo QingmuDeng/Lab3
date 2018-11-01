@@ -12,4 +12,8 @@ module programCounter
    always @(posedge clk) begin
         q <= d;
     end
+
+    initial begin
+      q = 32'b0;
+    end
 endmodule

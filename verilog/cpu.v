@@ -31,7 +31,7 @@ memory cpuMemory (
   .clk(clk),
   .dataMemorydataOut(dataOut),
   .instructionOut(instruction),
-  .InstructionAddress(pcOut[14:0]), // address are not full 32 bits???
+  .InstructionAddress(pcOut[14:0]), // initially we set these to [15:0], address are not full 32 bits???
   .dataMemoryAddress(aluResult[14:0]), //// address are not full 32 bits???
   .dataMemorywriteEnable(dm_we),
   .dataMemorydataIn(readOut2)
@@ -154,4 +154,9 @@ ALU pcBranch(
   .result(branchAddress)
   );
 
+  // assign pcIn = 32'b0;
+
+// initial begin
+//   pcOut = 32'b0;
+// end
 endmodule

@@ -40,6 +40,10 @@ module fsm(
   wire nzero;
   not not0(nzero, zero);
 
+  initial begin
+    muxPC = 2'b0;
+  end
+
   always @(*) begin
     case(opcode)
 

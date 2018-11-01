@@ -9,7 +9,7 @@
 
 module memory
   #(
-    parameter addresswidth  = 10,
+    parameter addresswidth  = 15,
     parameter depth         = 2**addresswidth,
     parameter width         = 32
     )
@@ -35,6 +35,6 @@ module memory
    initial $readmemh("test1.data", memory, 16'h1000);
 
    assign dataMemorydataOut = memory[dataMemoryAddress];
-   assign instructionOut = memory[InstructionAddress];
+   assign instructionOut = memory[InstructionAddress>>2];
 
 endmodule
