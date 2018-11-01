@@ -6,7 +6,7 @@
 `define SW 6'h2b
 `define BEQ 6'h4
 `define BNE 6'h5
-`define ADDI 6'h9
+`define ADDI 6'h8
 `define XORI 6'he
 `define JUMP 6'h2
 `define JAL 6'h3
@@ -60,7 +60,7 @@ module fsm(
           `JR: begin
             regWrite <= 1'b0;
             muxPC <= 2'd2;
-            // ALUop <= 3'd0;
+            ALUop <= 3'd0;
           end
 
           `ADD: begin
@@ -97,9 +97,9 @@ module fsm(
         regWrite <= 1'b0;
         muxA_en <= 1'b0;
         dm_we <= 1'b1;
-        // muxWD3_en = x;
+        muxWD3_en <= 1'b0;
         muxB_en <= 2'd0;
-        // regWriteAddSelect = x;
+        regWriteAddSelect <= 2'b0;
         muxPC <= 2'd0;
         ALUop <= `ADDSIGNAL;
       end
@@ -108,9 +108,9 @@ module fsm(
         regWrite <= 1'b0;
         muxA_en <= 1'b0;
         dm_we <= 1'b0;
-        // muxWD3_en = x;
+        muxWD3_en = 1'b0;
         muxB_en <= 2'd1;
-        // regWriteAddSelect = x;
+        regWriteAddSelect = 2'b0;
         ALUop <= `SUBSIGNAL;
         if(zero) begin
           muxPC <= 2'd3;
@@ -123,9 +123,9 @@ module fsm(
         regWrite <= 1'b0;
         muxA_en <= 1'b0;
         dm_we <= 1'b0;
-        // muxWD3_en = x;
+        muxWD3_en = 1'b0;
         muxB_en <= 2'd1;
-        // regWriteAddSelect = x;
+        regWriteAddSelect = 2'b0;
         ALUop <= `SUBSIGNAL;
         if(nzero) begin
           muxPC <= 2'd3;
@@ -158,13 +158,13 @@ module fsm(
 
       `JUMP: begin
         regWrite <= 1'b0;
-        // muxA_en = x;
+        muxA_en = 1'b0;
         dm_we <= 1'b0;
-        // muxWD3_en = x;
-        // muxB_en = x;
-        // regWriteAddSelect = x;
+        muxWD3_en = 1'b0;
+        muxB_en = 1'b0;
+        regWriteAddSelect = 1'b0;
         muxPC <= 2'b1;
-        // ALUop <= `ADDSIGNAL;
+        ALUop <= `ADDSIGNAL;
       end
 
       `JAL: begin
