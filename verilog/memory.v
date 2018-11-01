@@ -34,13 +34,13 @@ module memory
 
    always @(posedge clk) begin
       if(dataMemorywriteEnable)
-        memory[dataMemoryAddress] <= dataMemorydataIn;
+        memory[compactDataMemoryAddress] <= dataMemorydataIn;
    end
 
-   initial $readmemh("test1.text", memory, 0);
-   initial $readmemh("test1.data", memory, 16'h1000);
+   // initial $readmemh("test1.text", memory, 0);
+   // initial $readmemh("test1.data", memory, 16'h1000);
 
-   assign dataMemorydataOut = memory[dataMemoryAddress>>2];
-   assign instructionOut = memory[InstructionAddress>>2];
+   assign dataMemorydataOut = memory[compactDataMemoryAddress>>2];
+   assign instructionOut = memory[compactInstructionAddress>>2];
 
 endmodule
