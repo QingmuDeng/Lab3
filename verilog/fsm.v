@@ -33,7 +33,7 @@ module fsm(
     input [5:0] functcode,
     input zero,
 
-    output reg regWrite, muxA_en, dm_we, muxWD3_en, branch,
+    output reg regWrite, muxA_en, dm_we, muxWD3_en,
     output reg [1:0] muxB_en, regWriteAddSelect, muxPC,
     output reg [2:0] ALUop
   );
@@ -48,7 +48,6 @@ module fsm(
         muxA_en <= 1'b0;
         muxB_en <= 2'd1;
         muxWD3_en <= 1'b1;
-        branch <= 0;
         regWriteAddSelect <= 2'd2;
 
         case(functcode)
@@ -85,7 +84,6 @@ module fsm(
         muxB_en <= 2'd0;
         regWriteAddSelect <= 2'd0;
         muxPC <= 2'd0;
-        branch <= 1'b0;
         ALUop <= `ADDSIGNAL;
       end
 
@@ -97,7 +95,6 @@ module fsm(
         muxB_en <= 2'd0;
         // regWriteAddSelect = x;
         muxPC <= 2'd0;
-        branch <= 1'b0;
         ALUop <= `ADDSIGNAL;
       end
 
@@ -108,7 +105,6 @@ module fsm(
         // muxWD3_en = x;
         muxB_en <= 2'd1;
         // regWriteAddSelect = x;
-        branch <= 1'b1;
         ALUop <= `SUBSIGNAL;
         if(zero) begin
           muxPC <= 2'd3;
@@ -124,7 +120,6 @@ module fsm(
         // muxWD3_en = x;
         muxB_en <= 2'd1;
         // regWriteAddSelect = x;
-        branch <= 1'b1;
         ALUop <= `SUBSIGNAL;
         if(nzero) begin
           muxPC <= 2'd3;
@@ -141,7 +136,6 @@ module fsm(
         muxB_en = 2'd0;
         regWriteAddSelect <= 2'b0;
         muxPC <= 2'd0;
-        branch <= 1'b0;
         ALUop <= `ADDSIGNAL;
       end
 
@@ -153,7 +147,6 @@ module fsm(
         muxB_en <= 2'd0;
         regWriteAddSelect <= 2'b0;
         muxPC <= 2'b0;
-        branch <=1'b0;
         ALUop <= `XORSIGNAL;
       end
 
@@ -165,7 +158,6 @@ module fsm(
         // muxB_en = x;
         // regWriteAddSelect = x;
         muxPC <= 2'b1;
-        branch <= 1'b0;
         // ALUop <= `ADDSIGNAL;
       end
 
@@ -177,7 +169,6 @@ module fsm(
         muxB_en <= 2'd2;
         regWriteAddSelect <= 2'b1;
         muxPC <= 2'b1;
-        branch <= 1'b0;
         ALUop <= `ADDSIGNAL;
       end
 
