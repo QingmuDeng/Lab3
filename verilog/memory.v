@@ -40,7 +40,7 @@ module memory
    // initial $readmemh("test1.text", memory, 0);
    // initial $readmemh("test1.data", memory, 16'h1000);
 
-   assign dataMemorydataOut = memory[compactDataMemoryAddress>>2];
+   assign dataMemorydataOut = memory[compactDataMemoryAddress];
    assign instructionOut = memory[compactInstructionAddress>>2];
 
 endmodule
