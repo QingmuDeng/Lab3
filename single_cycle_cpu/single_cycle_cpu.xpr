@@ -60,102 +60,69 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/adder_1bit.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/adder_1bit.v"/>
-          <Attr Name="ImportTime" Val="1540934845"/>
+      <File Path="$PPRDIR/../verilog/adder_1bit.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/alu.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/alu.v"/>
-          <Attr Name="ImportTime" Val="1540934877"/>
+      <File Path="$PPRDIR/../verilog/alu.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/decoders.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/decoders.v"/>
-          <Attr Name="ImportTime" Val="1540752067"/>
+      <File Path="$PPRDIR/../verilog/decoders.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/dff.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/dff.v"/>
-          <Attr Name="ImportTime" Val="1541050941"/>
+      <File Path="$PPRDIR/../verilog/dff.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/instructionDecoder.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/instructionDecoder.v"/>
-          <Attr Name="ImportTime" Val="1541105973"/>
+      <File Path="$PPRDIR/../verilog/instructionDecoder.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/lshift2.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/lshift2.v"/>
-          <Attr Name="ImportTime" Val="1540752061"/>
+      <File Path="$PPRDIR/../verilog/lshift2.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/memory.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/memory.v"/>
-          <Attr Name="ImportTime" Val="1541115125"/>
+      <File Path="$PPRDIR/../verilog/memory.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/mux.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/mux.v"/>
-          <Attr Name="ImportTime" Val="1541091008"/>
+      <File Path="$PPRDIR/../verilog/mux.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/register.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/register.v"/>
-          <Attr Name="ImportTime" Val="1541109394"/>
+      <File Path="$PPRDIR/../verilog/regfile.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/regfile.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/regfile.v"/>
-          <Attr Name="ImportTime" Val="1541116816"/>
+      <File Path="$PPRDIR/../verilog/register.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/signextend.v">
-        <FileInfo>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/signextend.v"/>
-          <Attr Name="ImportTime" Val="1540751796"/>
+      <File Path="$PPRDIR/../verilog/signextend.v">
+        <FileInfo SFType="VHeader">
           <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
@@ -163,16 +130,6 @@
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../verilog/cpu.v"/>
           <Attr Name="ImportTime" Val="1541109404"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/imports/verilog/mux_reg.v">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="ImportPath" Val="$PPRDIR/../verilog/mux_reg.v"/>
-          <Attr Name="ImportTime" Val="1541041951"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
@@ -245,7 +202,7 @@
       <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z010clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2018"/>
         <Step Id="init_design"/>
@@ -258,6 +215,7 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2018"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
     </Run>

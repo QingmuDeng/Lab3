@@ -29,20 +29,31 @@ set_property target_language Verilog [current_project]
 set_property board_part digilentinc.com:zybo:part0:1.0 [current_project]
 set_property ip_output_repo /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
-read_verilog -library xil_defaultlib {
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/decoders.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/dff.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/lshift2.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/memory.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/regfile.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/signextend.v
-  /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v
+read_verilog {
+  /home/comparch/Lab/Lab3/verilog/adder_1bit.v
+  /home/comparch/Lab/Lab3/verilog/alu.v
+  /home/comparch/Lab/Lab3/verilog/decoders.v
+  /home/comparch/Lab/Lab3/verilog/dff.v
+  /home/comparch/Lab/Lab3/verilog/instructionDecoder.v
+  /home/comparch/Lab/Lab3/verilog/lshift2.v
+  /home/comparch/Lab/Lab3/verilog/memory.v
+  /home/comparch/Lab/Lab3/verilog/mux.v
+  /home/comparch/Lab/Lab3/verilog/regfile.v
+  /home/comparch/Lab/Lab3/verilog/register.v
+  /home/comparch/Lab/Lab3/verilog/signextend.v
 }
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/adder_1bit.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/alu.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/decoders.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/dff.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/instructionDecoder.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/lshift2.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/memory.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/mux.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/regfile.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/register.v]
+set_property file_type "Verilog Header" [get_files /home/comparch/Lab/Lab3/verilog/signextend.v]
+read_verilog -library xil_defaultlib /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
 # design are intentionally left as such for best results. Dcp files will be
