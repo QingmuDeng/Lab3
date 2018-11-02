@@ -2,6 +2,7 @@
 
 main: 
 # Set up arguments for call to fib_test
+addi  $sp, $zero, 0x3ffc
 addi  $a0, $zero, 4	# arg0 = 4
 addi  $a1, $zero, 10	# arg1 = 10
 jal   fib_test
