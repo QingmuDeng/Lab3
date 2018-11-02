@@ -42,5 +42,5 @@ module regfile
     end
   endgenerate
   /******** The end of Write Operation ********/
-
+  
 endmodule

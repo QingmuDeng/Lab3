@@ -1,2 +1,4 @@
 *.vpp
 *.vcd
+*.hex
+*.vvp

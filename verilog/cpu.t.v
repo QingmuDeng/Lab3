@@ -14,17 +14,12 @@ module cpuTest ();
 
   // reg regfreset=0;
   integer index;
-  reg[4:0] regfAddress;
-  // task reset_dut;
-  //   // dut.pc.d = 32'b0;
-  //   for(regfAddress=0; regfAddress<=31; regfAddress=regfAddress+1) begin
-  //     dut.registerFile.mainReg[5'd4].register.d = 32'b0;
-  //     dut.registerFile.mainReg[5'd6].register.wrenable = 1'b1;
-  //     #20;regfreset = 1;
-  //   end
-  // endtask
+  integer regfAddress;
 
 initial begin
+
+    $dumpfile("cpu.vcd");
+    $dumpvars();
 
     $readmemh("test1.text", dut.cpuMemory.memory, 0);
     #250; // Run Program
@@ -37,22 +32,45 @@ initial begin
     end
     #50
 
-    // for(regfAddress=0; regfAddress<=31; regfAddress=regfAddress+1) begin
-    //   dut.registerFile.mainReg[regfAddress].register.d = 32'b0;
-    //   dut.opDecoder.regWrite = 1;
-    //   // dut.registerFile.mainReg[5'd6].register.wrenable = 1'b1;
-    //   #20;
-    // end
 
-    dut.registerFile.WriteData = 32'b4;
-    for(regfAddress=0; regfAddress<=31; regfAddress=regfAddress+1) begin
-      dut.registerFile.WriteData = 32'b1;
-      // dut.registerFile.WriteRegister = 5'd3;
+    for(regfAddress=1; regfAddress<=31; regfAddress=regfAddress+1) begin
+      dut.muxWD3.out = 32'b0;
+      dut.muxRegWriteSelect.out = regfAddress;
       dut.opDecoder.regWrite = 1;
-      // dut.registerFile.mainReg[5'd6].register.wrenable = 1'b1;
       #20;
     end
-
+    $display(dut.registerFile.register.q);
+      $display(dut.registerFile.mainReg[5'd1].register.q);
+      $display(dut.registerFile.mainReg[5'd2].register.q);
+      $display(dut.registerFile.mainReg[5'd3].register.q);
+      $display(dut.registerFile.mainReg[5'd4].register.q);
+      $display(dut.registerFile.mainReg[5'd5].register.q);
+      $display(dut.registerFile.mainReg[5'd6].register.q);
+      $display(dut.registerFile.mainReg[5'd7].register.q);
+      $display(dut.registerFile.mainReg[5'd8].register.q);
+      $display(dut.registerFile.mainReg[5'd9].register.q);
+      $display(dut.registerFile.mainReg[5'd10].register.q);
+      $display(dut.registerFile.mainReg[5'd11].register.q);
+      $display(dut.registerFile.mainReg[5'd12].register.q);
+      $display(dut.registerFile.mainReg[5'd13].register.q);
+      $display(dut.registerFile.mainReg[5'd14].register.q);
+      $display(dut.registerFile.mainReg[5'd15].register.q);
+      $display(dut.registerFile.mainReg[5'd16].register.q);
+      $display(dut.registerFile.mainReg[5'd17].register.q);
+      $display(dut.registerFile.mainReg[5'd18].register.q);
+      $display(dut.registerFile.mainReg[5'd19].register.q);
+      $display(dut.registerFile.mainReg[5'd20].register.q);
+      $display(dut.registerFile.mainReg[5'd21].register.q);
+      $display(dut.registerFile.mainReg[5'd22].register.q);
+      $display(dut.registerFile.mainReg[5'd23].register.q);
+      $display(dut.registerFile.mainReg[5'd24].register.q);
+      $display(dut.registerFile.mainReg[5'd25].register.q);
+      $display(dut.registerFile.mainReg[5'd26].register.q);
+      $display(dut.registerFile.mainReg[5'd27].register.q);
+      $display(dut.registerFile.mainReg[5'd28].register.q);
+      $display(dut.registerFile.mainReg[5'd29].register.q);
+      $display(dut.registerFile.mainReg[5'd30].register.q);
+      $display(dut.registerFile.mainReg[5'd31].register.q);
     // for(index=0;index <=15;index = index + 1) begin
     //   ReadRegister1 = index;
     //   ReadRegister2 = index + 16;
@@ -66,9 +84,9 @@ initial begin
     // end
 
 
-    $readmemh("test2.text", dut.cpuMemory.memory, 0);
-    $readmemh("test2.data", dut.cpuMemory.memory, 16'h1000);
-    #500
+    // $readmemh("test2.text", dut.cpuMemory.memory, 0);
+    // $readmemh("test2.data", dut.cpuMemory.memory, 16'h1000);
+    // #500
 
     // if (dut.cpuMemory.memory.)
 
