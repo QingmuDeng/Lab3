@@ -1,0 +1,624 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov  1 23:13:43 2018
+# Process ID: 2890
+# Current directory: /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.runs/synth_1
+# Command line: vivado -log cpu.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source cpu.tcl
+# Log file: /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.runs/synth_1/cpu.vds
+# Journal file: /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.runs/synth_1/vivado.jou
+#-----------------------------------------------------------
+source cpu.tcl -notrace
+Command: synth_design -top cpu -part xc7z010clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 2899 
+WARNING: [Synth 8-2306] macro NAND redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:3]
+WARNING: [Synth 8-2306] macro NOR redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:4]
+WARNING: [Synth 8-2306] macro AND redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:6]
+WARNING: [Synth 8-2306] macro NAND redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:2]
+WARNING: [Synth 8-2306] macro AND redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:3]
+WARNING: [Synth 8-2306] macro NOR redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:4]
+WARNING: [Synth 8-2490] overwriting previous definition of module structuralFullAdder [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:8]
+WARNING: [Synth 8-2306] macro SUB redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:16]
+WARNING: [Synth 8-2306] macro SLT redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:17]
+WARNING: [Synth 8-2306] macro ADD redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:18]
+WARNING: [Synth 8-2490] overwriting previous definition of module register32 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module register32zero [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v:18]
+WARNING: [Synth 8-2490] overwriting previous definition of module decoder1to32 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/decoders.v:4]
+WARNING: [Synth 8-2306] macro NAND redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:3]
+WARNING: [Synth 8-2306] macro NOR redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:4]
+WARNING: [Synth 8-2306] macro AND redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:6]
+WARNING: [Synth 8-2306] macro ADD redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:14]
+WARNING: [Synth 8-2306] macro SUB redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:15]
+WARNING: [Synth 8-2306] macro SLT redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:17]
+WARNING: [Synth 8-2306] macro NAND redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:2]
+WARNING: [Synth 8-2306] macro AND redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:3]
+WARNING: [Synth 8-2306] macro NOR redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:4]
+WARNING: [Synth 8-2490] overwriting previous definition of module structuralFullAdder [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:8]
+WARNING: [Synth 8-2490] overwriting previous definition of module ALU_slice [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:26]
+WARNING: [Synth 8-2490] overwriting previous definition of module ALU_slice_MSB [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:54]
+WARNING: [Synth 8-2490] overwriting previous definition of module ALUcontrolLUT [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:83]
+WARNING: [Synth 8-2490] overwriting previous definition of module ALU [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:106]
+WARNING: [Synth 8-2490] overwriting previous definition of module multiplexer [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:154]
+WARNING: [Synth 8-2490] overwriting previous definition of module memory [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/memory.v:10]
+WARNING: [Synth 8-2490] overwriting previous definition of module lshift28 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/lshift2.v:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module lshift32 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/lshift2.v:10]
+WARNING: [Synth 8-2306] macro SUB redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:16]
+WARNING: [Synth 8-2306] macro SLT redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:17]
+WARNING: [Synth 8-2306] macro ADD redefined [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:18]
+WARNING: [Synth 8-2490] overwriting previous definition of module instructionDecoder [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:31]
+WARNING: [Synth 8-2490] overwriting previous definition of module signExtend [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/signextend.v:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module register32 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v:1]
+WARNING: [Synth 8-2490] overwriting previous definition of module register32zero [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v:18]
+WARNING: [Synth 8-2490] overwriting previous definition of module decoder1to32 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/decoders.v:4]
+WARNING: [Synth 8-2490] overwriting previous definition of module regfile [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/regfile.v:12]
+WARNING: [Synth 8-2490] overwriting previous definition of module programCounter [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/dff.v:5]
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1257.723 ; gain = 72.273 ; free physical = 4855 ; free virtual = 6969
+---------------------------------------------------------------------------------
+INFO: [Synth 8-6157] synthesizing module 'cpu' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:10]
+INFO: [Synth 8-6157] synthesizing module 'memory' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/memory.v:10]
+	Parameter addresswidth bound to: 32 - type: integer 
+	Parameter depth bound to: 32768 - type: integer 
+	Parameter width bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'memory' (1#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/memory.v:10]
+INFO: [Synth 8-6157] synthesizing module 'programCounter' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/dff.v:5]
+INFO: [Synth 8-6155] done synthesizing module 'programCounter' (2#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/dff.v:5]
+INFO: [Synth 8-6157] synthesizing module 'mux4to1by32' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:3]
+INFO: [Synth 8-6155] done synthesizing module 'mux4to1by32' (3#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:3]
+INFO: [Synth 8-6157] synthesizing module 'mux4to1by5' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'mux4to1by5' (4#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:23]
+WARNING: [Synth 8-350] instance 'muxB' of module 'mux4to1by32' requires 6 connections, but only 5 given [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+INFO: [Synth 8-6157] synthesizing module 'mux2to1by32' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:61]
+INFO: [Synth 8-6155] done synthesizing module 'mux2to1by32' (5#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:61]
+INFO: [Synth 8-6157] synthesizing module 'signExtend' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/signextend.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'signExtend' (6#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/signextend.v:1]
+INFO: [Synth 8-6157] synthesizing module 'lshift32' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/lshift2.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'lshift32' (7#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/lshift2.v:10]
+INFO: [Synth 8-6157] synthesizing module 'lshift28' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/lshift2.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lshift28' (8#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/lshift2.v:1]
+INFO: [Synth 8-6157] synthesizing module 'ALU' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:106]
+INFO: [Synth 8-6157] synthesizing module 'ALU_slice' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:26]
+INFO: [Synth 8-6157] synthesizing module 'structuralFullAdder' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:8]
+INFO: [Synth 8-6155] done synthesizing module 'structuralFullAdder' (9#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/adder_1bit.v:8]
+INFO: [Synth 8-6157] synthesizing module 'multiplexer' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:154]
+INFO: [Synth 8-6155] done synthesizing module 'multiplexer' (10#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:154]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_slice' (11#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:26]
+INFO: [Synth 8-6157] synthesizing module 'ALUcontrolLUT' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:83]
+INFO: [Synth 8-6155] done synthesizing module 'ALUcontrolLUT' (12#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:83]
+INFO: [Synth 8-6157] synthesizing module 'ALU_slice_MSB' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'ALU_slice_MSB' (13#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:54]
+INFO: [Synth 8-6155] done synthesizing module 'ALU' (14#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/alu.v:106]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/regfile.v:12]
+INFO: [Synth 8-6157] synthesizing module 'register32' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'register32' (15#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decoder1to32' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/decoders.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'decoder1to32' (16#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/decoders.v:4]
+INFO: [Synth 8-6157] synthesizing module 'register32zero' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'register32zero' (17#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/register.v:18]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (18#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/regfile.v:12]
+INFO: [Synth 8-6157] synthesizing module 'instructionDecoder' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:31]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:59]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:50]
+INFO: [Synth 8-6155] done synthesizing module 'instructionDecoder' (19#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:31]
+INFO: [Synth 8-6155] done synthesizing module 'cpu' (20#1) [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:10]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[31]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[30]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[29]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[28]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[27]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[26]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[25]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[24]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[23]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[22]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[21]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[20]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[19]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[18]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[17]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[16]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[15]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[14]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[13]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[12]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[11]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[10]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[9]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[8]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[7]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[6]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[5]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[4]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[3]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[2]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[1]
+WARNING: [Synth 8-3331] design register32zero has unconnected port d[0]
+WARNING: [Synth 8-3331] design register32zero has unconnected port wrenable
+WARNING: [Synth 8-3331] design register32zero has unconnected port clk
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[31]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[30]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[29]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[28]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[27]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[26]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[25]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[24]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[23]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[22]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[21]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[20]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[19]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[18]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[17]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[16]
+WARNING: [Synth 8-3331] design memory has unconnected port InstructionAddress[15]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[31]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[30]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[29]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[28]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[27]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[26]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[25]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[24]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[23]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[22]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[21]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[20]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[19]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[18]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[17]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[16]
+WARNING: [Synth 8-3331] design memory has unconnected port dataMemoryAddress[15]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 1306.848 ; gain = 121.398 ; free physical = 4838 ; free virtual = 6963
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+WARNING: [Synth 8-3295] tying undriven pin muxRegWriteSelect:input3[4] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:56]
+WARNING: [Synth 8-3295] tying undriven pin muxRegWriteSelect:input3[3] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:56]
+WARNING: [Synth 8-3295] tying undriven pin muxRegWriteSelect:input3[2] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:56]
+WARNING: [Synth 8-3295] tying undriven pin muxRegWriteSelect:input3[1] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:56]
+WARNING: [Synth 8-3295] tying undriven pin muxRegWriteSelect:input3[0] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:56]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[31] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[30] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[29] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[28] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[27] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[26] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[25] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[24] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[23] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[22] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[21] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[20] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[19] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[18] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[17] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[16] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[15] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[14] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[13] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[12] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[11] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[10] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[9] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[8] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[7] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[6] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[5] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[4] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[3] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[2] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[1] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+WARNING: [Synth 8-3295] tying undriven pin muxB:input3[0] to constant 0 [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/cpu.v:65]
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1306.848 ; gain = 121.398 ; free physical = 4833 ; free virtual = 6958
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:08 ; elapsed = 00:00:10 . Memory (MB): peak = 1306.848 ; gain = 121.398 ; free physical = 4833 ; free virtual = 6958
+---------------------------------------------------------------------------------
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/constrs_1/imports/comparch/ZYBO_Master.xdc]
+Finished Parsing XDC File [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/constrs_1/imports/comparch/ZYBO_Master.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/constrs_1/imports/comparch/ZYBO_Master.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/cpu_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/cpu_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 1660.395 ; gain = 0.000 ; free physical = 4531 ; free virtual = 6699
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:27 ; elapsed = 00:00:49 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4611 ; free virtual = 6780
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:27 ; elapsed = 00:00:49 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4611 ; free virtual = 6780
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:49 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4613 ; free virtual = 6782
+---------------------------------------------------------------------------------
+INFO: [Synth 8-5546] ROM "dm_we" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "muxA_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "muxB_en" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5587] ROM size for "muxWD3_en" is below threshold of ROM address width. It will be mapped to LUTs
+INFO: [Synth 8-5546] ROM "regWriteAddSelect" won't be mapped to RAM because it is too sparse
+INFO: [Synth 8-5546] ROM "regWrite" won't be mapped to RAM because it is too sparse
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:12]
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:33]
+WARNING: [Synth 8-327] inferring latch for variable 'out_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/mux.v:70]
+WARNING: [Synth 8-327] inferring latch for variable 'regWrite_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:61]
+WARNING: [Synth 8-327] inferring latch for variable 'muxA_en_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:54]
+WARNING: [Synth 8-327] inferring latch for variable 'dm_we_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:53]
+WARNING: [Synth 8-327] inferring latch for variable 'muxWD3_en_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:56]
+WARNING: [Synth 8-327] inferring latch for variable 'muxB_en_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:55]
+WARNING: [Synth 8-327] inferring latch for variable 'regWriteAddSelect_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:57]
+WARNING: [Synth 8-327] inferring latch for variable 'muxPC_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:62]
+WARNING: [Synth 8-327] inferring latch for variable 'ALUop_reg' [/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/imports/verilog/instructionDecoder.v:63]
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:28 ; elapsed = 00:00:50 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4604 ; free virtual = 6772
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 582   
++---Registers : 
+	               32 Bit    Registers := 32    
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 2     
+	   2 Input     32 Bit        Muxes := 2     
+	   4 Input      5 Bit        Muxes := 1     
+	   8 Input      3 Bit        Muxes := 3     
+	   5 Input      3 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 6     
+	   5 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module programCounter 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module mux4to1by32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input     32 Bit        Muxes := 1     
+Module mux4to1by5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   4 Input      5 Bit        Muxes := 1     
+Module mux2to1by32 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 1     
+Module ALUcontrolLUT 
+Detailed RTL Component Info : 
++---Muxes : 
+	   8 Input      3 Bit        Muxes := 1     
+	   8 Input      1 Bit        Muxes := 2     
+Module structuralFullAdder 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module ALU_slice 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
+Module ALU_slice_MSB 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 4     
+Module ALU 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 2     
+Module register32 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+Module instructionDecoder 
+Detailed RTL Component Info : 
++---Muxes : 
+	   5 Input      3 Bit        Muxes := 1     
+	  10 Input      2 Bit        Muxes := 2     
+	   5 Input      2 Bit        Muxes := 1     
+	   5 Input      1 Bit        Muxes := 1     
+	  10 Input      1 Bit        Muxes := 6     
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+WARNING: [Synth 8-3332] Sequential element (out_reg[4]) is unused and will be removed from module mux4to1by5.
+WARNING: [Synth 8-3332] Sequential element (out_reg[3]) is unused and will be removed from module mux4to1by5.
+WARNING: [Synth 8-3332] Sequential element (out_reg[2]) is unused and will be removed from module mux4to1by5.
+WARNING: [Synth 8-3332] Sequential element (out_reg[1]) is unused and will be removed from module mux4to1by5.
+WARNING: [Synth 8-3332] Sequential element (out_reg[0]) is unused and will be removed from module mux4to1by5.
+WARNING: [Synth 8-3332] Sequential element (out_reg[31]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[30]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[29]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[28]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[27]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[26]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[25]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[24]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[23]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[22]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[21]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[20]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[19]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[18]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[17]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[16]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[15]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[14]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[13]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[12]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[11]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[10]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[9]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[8]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[7]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[6]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[5]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[4]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[3]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[2]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[1]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[0]) is unused and will be removed from module mux4to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[31]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[30]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[29]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[28]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[27]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[26]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[25]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[24]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[23]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[22]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[21]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[20]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[19]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[18]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[17]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[16]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[15]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[14]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[13]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[12]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[11]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[10]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[9]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[8]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[7]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[6]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[5]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[4]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[3]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[2]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[1]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (out_reg[0]) is unused and will be removed from module mux2to1by32.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[31]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[30]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[29]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[28]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[27]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[26]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[25]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[24]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[23]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[22]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[21]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[20]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[19]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[18]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[17]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[16]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[15]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[14]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[13]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[12]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[11]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[10]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[9]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[8]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[7]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[6]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[5]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[4]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[3]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[2]) is unused and will be removed from module regfile.
+WARNING: [Synth 8-3332] Sequential element (mainReg[31].register/q_reg[1]) is unused and will be removed from module regfile.
+INFO: [Common 17-14] Message 'Synth 8-3332' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:55 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4599 ; free virtual = 6771
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:48 ; elapsed = 00:01:15 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4473 ; free virtual = 6651
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:48 ; elapsed = 00:01:15 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4473 ; free virtual = 6651
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:48 ; elapsed = 00:01:15 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4472 ; free virtual = 6651
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4468 ; free virtual = 6647
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4468 ; free virtual = 6647
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4468 ; free virtual = 6647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4468 ; free virtual = 6647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4468 ; free virtual = 6647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4468 ; free virtual = 6647
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++-+-----+------+
+| |Cell |Count |
++-+-----+------+
++-+-----+------+
+
+Report Instance Areas: 
++------+---------+-------+------+
+|      |Instance |Module |Cells |
++------+---------+-------+------+
+|1     |top      |       |     0|
++------+---------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4468 ; free virtual = 6647
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 1132 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:00:42 . Memory (MB): peak = 1660.395 ; gain = 121.398 ; free physical = 4524 ; free virtual = 6703
+Synthesis Optimization Complete : Time (s): cpu = 00:00:50 ; elapsed = 00:01:17 . Memory (MB): peak = 1660.395 ; gain = 474.945 ; free physical = 4527 ; free virtual = 6706
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+59 Infos, 258 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:52 ; elapsed = 00:01:18 . Memory (MB): peak = 1660.395 ; gain = 475.047 ; free physical = 4523 ; free virtual = 6702
+WARNING: [Constraints 18-5210] No constraint will be written out.
+INFO: [Common 17-1381] The checkpoint '/home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.runs/synth_1/cpu.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file cpu_utilization_synth.rpt -pb cpu_utilization_synth.pb
+report_utilization: Time (s): cpu = 00:00:00.14 ; elapsed = 00:00:00.17 . Memory (MB): peak = 1660.395 ; gain = 0.000 ; free physical = 4523 ; free virtual = 6703
+INFO: [Common 17-206] Exiting Vivado at Thu Nov  1 23:15:10 2018...

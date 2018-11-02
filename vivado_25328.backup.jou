@@ -1,0 +1,31 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:02:38 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Thu Nov  1 22:55:50 2018
+# Process ID: 25328
+# Current directory: /home/comparch/Lab/Lab3
+# Command line: vivado
+# Log file: /home/comparch/Lab/Lab3/vivado.log
+# Journal file: /home/comparch/Lab/Lab3/vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project /home/comparch/Lab/Lab3/single_cycle_cpu/single_cycle_cpu.xpr
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+open_run synth_1 -name synth_1
+report_utilization -name utilization_1
+add_files -fileset constrs_1 -norecurse /home/comparch/ZYBO_Master.xdc
+import_files -fileset constrs_1 /home/comparch/ZYBO_Master.xdc
+reset_run synth_1
+launch_runs synth_1
+wait_on_run synth_1
+refresh_design
+reset_run synth_1
+launch_runs synth_1
+reset_run synth_1
+launch_runs synth_1
+reset_run synth_1
+launch_runs synth_1
