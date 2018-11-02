@@ -1,5 +1,5 @@
 # Function call test: recursive Tower of Hanoi problem
-
+addi $sp, $zero, 0x3ffc
 main:
 # Set up arguments for call to hanoi_test
 addi  $a0, $zero, 4	# arg0 = 4
