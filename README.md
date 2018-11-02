@@ -4,6 +4,18 @@ The goal of this lab is to design, create, and test a 32-bit single cycle CPU.
 
 You will work in groups of 2-3. You may shuffle teams if you so choose.
 
+## Running Testbenches
+To run the test benches, first clone this repository with the following command.
+```
+$ git clone https://github.com/QingmuDeng/Lab3.git
+$ cd Lab3
+```
+To run the top level test bench, do the following:
+```
+$ cd verilog
+$ bash cpu_test.sh
+```
+
 ## Work Plan ##
 
 Draft a work plan for this lab, breaking down the work in to small portions. For each portion estimate how long it will take (in hours) and when it will be done by (date). 
